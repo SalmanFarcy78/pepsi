@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images-20230815T025504Z-001/images/logo.png" type="image/png">
+    <title>Responsive Pepsi Website Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="tel:+"><img src="images-20230815T025504Z-001/images/logo.png"></a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="nav">
+                <li><a href="tel:+">Home</a></li>
+                <li><a href="tel:+">Products</a></li>
+                <li><a href="tel:+">What's New</a></li>
+                <li><a href="tel:+">Newsletter</a></li>
+                <li><a href="tel:+">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>That's What<br><span>I like</span></h2>
+                <p>Hi there, I'm <span style="color: chartreuse; font-weight: 600;"> Nazr E Ahsan Sinan </span>. I am a Web Developer.  
+                    <br><span style="color: chartreuse;font-weight: 600;"> Samir </span>is my younger brother, he likes to watch video on YouTube. <br> Me and Samir both are like PEPSI very much.
+                    If you like my website, then subscribe and like my channel.</p>
+                <a href="tel:+">View All Products</a>
+            </div>
+            <div class="imgBox">
+                <img src="images-20230815T025504Z-001/images/pepsi001.png" class="pepsi">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="images-20230815T025504Z-001/images/pepsi001.png" onclick="imgSlider('images-20230815T025504Z-001/images/pepsi001.png');changeBgColor('#0062be')"></li>
+            <li><img src="images-20230815T025504Z-001/images/pepsi002.png" onclick="imgSlider('images-20230815T025504Z-001/images/pepsi002.png');changeBgColor('rgb(135, 135, 135)')"></li>
+            <li><img src="images-20230815T025504Z-001/images/pepsi003.png" onclick="imgSlider('images-20230815T025504Z-001/images/pepsi003.png');changeBgColor('#1e1e1e')"></li>
+            <li><img src="images-20230815T025504Z-001/images/pepsi005.png" onclick="imgSlider('images-20230815T025504Z-001/images/pepsi005.png');changeBgColor('rgb(197, 20, 47)')"></li>
+            <li><img src="images-20230815T025504Z-001/images/pepsi006.png" onclick="imgSlider('images-20230815T025504Z-001/images/pepsi006.png');changeBgColor('rgb(135, 135, 135)')"></li>
+            <li><img src="images-20230815T025504Z-001/images/pepsi007.png" onclick="imgSlider('images-20230815T025504Z-001/images/pepsi007.png');changeBgColor('rgba(208, 36, 118, 0.98)')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href=""><img src="images-20230815T025504Z-001/images/facebook.png"></a></li>
+            <li><a href=""><img src="images-20230815T025504Z-001/images/twitter.png"></a></li>
+            <li><a href=""><img src="images-20230815T025504Z-001/images/instagram.png"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.pepsi').src = anything;
+        }
+        function changeBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+        function menuToggle(){
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const nav = document.querySelector('.nav');
+            toggleMenu.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
